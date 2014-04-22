@@ -9,6 +9,9 @@ app.listen(port, function() {
 });
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
+app.get('/', function(request, response) {
+    response.sendfile('./index.html');
+});
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
 		if(err) {
