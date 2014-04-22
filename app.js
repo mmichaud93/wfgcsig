@@ -8,8 +8,11 @@ app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
-		if(err) { throw err; }
-		response.send(JSON.stringify(json));
+		if(err) {
+            response.send("404 File Not Found");
+        } else {
+		    response.send(JSON.stringify(json));
+        }
 	});
 });
 app.post('/save-insults', function(request, response) {
@@ -25,8 +28,11 @@ app.post('/save-insults', function(request, response) {
 });
 app.get('/graphicscard', function(request, response) {
 	readJSONFile("./parts/graphics/graphics.json", function (err, json) {
-		if(err) { throw err; }
-		response.send(JSON.stringify(json));
+		if(err) {
+            response.send("404 File Not Found");
+        } else {
+            response.send(JSON.stringify(json));
+        }
 	});
 });
 
