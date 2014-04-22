@@ -82,10 +82,6 @@ function saveInsults() {
 
   	// send the collected data as JSON
   	xhr.send(JSON.stringify(data));
-
-  	xhr.onloadend = function () {
-     alert("saved");
-  	};
 }
 
 function newInsult() {
