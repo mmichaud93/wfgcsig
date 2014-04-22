@@ -78,7 +78,7 @@ function saveInsults() {
 	console.log(data);
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST','http://calm-wave-1864.herokuapp.com/save-insults',true);
-	xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
   	// send the collected data as JSON
   	xhr.send("insults="+JSON.stringify(data));
