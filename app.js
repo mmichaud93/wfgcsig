@@ -3,13 +3,18 @@ var fs = require('fs');
 var app = express();
 
 var port = Number(process.env.PORT || 53535);
+app.get("/", function(request, response) {
+    response.send('hello world');
+});
 app.listen(port);
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/insults', function(request, response) {
+    response.send('hello world');
+    console.log('hello world');
 	readJSONFile("./insults/insults.json", function (err, json) {
 		if(err) {
-            response.send("404 File Not Found");
+            response.send('404 File Not Found');
         } else {
 		    response.send(JSON.stringify(json));
         }
