@@ -2,7 +2,8 @@ var express = require('express');
 var fs = require('fs');
 var app = express();
 
-app.listen(3000);
+var port = Number(process.env.PORT || 53535);
+app.listen(port);
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/insult', function(request, response) {
