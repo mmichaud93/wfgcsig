@@ -39,11 +39,11 @@ app.get('/insults', function(request, response) {
 });
 app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
-    var data = response.body;
-    console.log(response);
-    console.log(response.body);
+    var data = request.body;
+    console.log(request);
+    console.log(request.body);
     //console.log("data.insults = "+data.insults);
-    fs.writeFile(outputFilename, response.body, function(err) {
+    fs.writeFile(outputFilename, request.body, function(err) {
         if(err) {
             console.log(err);
         } else {
