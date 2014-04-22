@@ -1,1 +1,32 @@
-{"json":"[{\"insult\":\"DONT FUCK IT UP AND BUY THIS \",\"secondInsult\":\" \",\"$$hashKey\":\"004\"},{\"insult\":\"GOD YOU'RE SO DUMB YOU DIDN'T THINK TO BUY THIS \",\"secondInsult\":\" \",\"$$hashKey\":\"005\"},{\"insult\":\"IF YOU A SIMPLE BITCH YOU MIGHT WANT TO FOCUS YOUR EYE BALLS ON THE \",\"secondInsult\":\" \",\"$$hashKey\":\"006\"},{\"insult\":\"GROW A PAIR AND GET THIS \",\"secondInsult\":\" \",\"$$hashKey\":\"007\"},{\"insult\":\"MY GRANDMA RUNS THIS \",\"secondInsult\":\" SO SHE CAN PLAY SOLITAIRE\",\"$$hashKey\":\"008\"},{\"insult\":\"YOU KNOW WHAT? DONT GET THIS \",\"secondInsult\":\" IT HAS WAY MORE BALLS THAN YOU\",\"$$hashKey\":\"009\"},{\"insult\":\"THIS IS A FUCKING TEST\",\"secondInsult\":\" \",\"$$hashKey\":\"00G\"}]"}
+{
+	"insults" : [
+		{
+			"insult":"DONT FUCK IT UP AND BUY THIS ",
+			"secondInsult":" "
+		},
+		{
+			"insult":"GOD YOU'RE SO DUMB YOU DIDN'T THINK TO BUY THIS ",
+			"secondInsult":" "
+		},
+		{
+			"insult":"IF YOU A SIMPLE BITCH YOU MIGHT WANT TO FOCUS YOUR EYE BALLS ON THE ",
+			"secondInsult":" "
+		},
+		{
+			"insult":"GROW A PAIR AND GET THIS ",
+			"secondInsult":" "
+		},
+		{
+			"insult":"MY GRANDMA RUNS THIS ",
+			"secondInsult":" SO SHE CAN PLAY SOLITAIRE"
+		},
+		{
+			"insult":"YOU KNOW WHAT? DONT GET THIS ",
+			"secondInsult":" IT HAS WAY MORE BALLS THAN YOU"
+		},
+		{
+			"insult":"THIS IS A FUCKING TEST",
+			"secondInsult":" BITCH"
+		}
+	]
+}
