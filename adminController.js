@@ -73,13 +73,19 @@ function onload() {
 }
 
 function saveInsults() {
-	var json = JSON.stringify(insults);
-	var encoded = btoa(json);
-	console.log(json);
+	var data = {};
+	data["insults"] = insults;
+	console.log(data);
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST','http://calm-wave-1864.herokuapp.com/save-insults',true);
-	xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-	xhr.send('json=' + json);
+	xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+  	// send the collected data as JSON
+  	xhr.send(JSON.stringify(data));
+
+  	xhr.onloadend = function () {
+     alert("saved");
+  	};
 }
 
 function newInsult() {

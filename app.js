@@ -43,7 +43,6 @@ console.log(request.body[0]);
 	fs.writeFile(outputFilename, request.body[0], function(err) {
     	if(err) {
             console.log(err);
-    	  console.log(err);
     	} else {
     	  console.log("JSON saved to " + outputFilename);
     	}
