@@ -76,12 +76,16 @@ function saveInsults() {
 	var data = {};
 	data["insults"] = insults;
 	console.log(data);
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST','http://calm-wave-1864.herokuapp.com/save-insults',true);
-	xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+	$.post('http://calm-wave-1864.herokuapp.com/save-insults', data)
+  		.done(function( data ) {
+    		alert("done");
+  		});
+	// var xhr = new XMLHttpRequest();
+	// xhr.open('POST','http://calm-wave-1864.herokuapp.com/save-insults',true);
+	// xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
-  	// send the collected data as JSON
-  	xhr.send(JSON.stringify(data));
+ //  	// send the collected data as JSON
+ //  	xhr.send(JSON.stringify(data));
 }
 
 function newInsult() {
