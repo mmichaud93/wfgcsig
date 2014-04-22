@@ -12,14 +12,11 @@ app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/', function(request, response) {
     response.sendfile('./index.html');
 });
-app.get('/angular.min.js', function(request, response) {
-    response.sendfile('./angular.min.js');
-});
 app.get('/styles.css', function(request, response) {
     response.sendfile('./styles.css');
 });
 app.get('/controller.js', function(request, response) {
-    response.sendfile('./controller.css');
+    response.sendfile('./controller.js');
 });
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
