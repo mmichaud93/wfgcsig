@@ -29,7 +29,7 @@ app.post('/save-insults', function(request, response) {
     	}
 	}); 
 });
-app.get('/graphicscard', function(request, response) {
+app.get('/graphics', function(request, response) {
 	readJSONFile("./parts/graphics/graphics.json", function (err, json) {
 		if(err) {
             response.send("404 File Not Found");

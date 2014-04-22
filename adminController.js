@@ -6,7 +6,7 @@ var scope;
 app.controller('wfgcsigCtrlAdmin', function ($scope) {
 	// get a random insult
 	scope = $scope;
-	$.getJSON("./server/insults/insults.json", {
+	$.getJSON("http://calm-wave-1864.herokuapp.com/insults", {
 		format: "json"
 	}).done(function (data) {
 		var i = Math.floor((Math.random()*data.length));
@@ -77,7 +77,7 @@ function saveInsults() {
 	var encoded = btoa(json);
 
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST','http://localhost:3000/save-insult',true);
+	xhr.open('POST','http://calm-wave-1864.herokuapp.com/save-insult',true);
 	xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 	xhr.send('json=' + json);
 }

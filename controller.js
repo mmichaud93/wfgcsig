@@ -3,7 +3,7 @@ var app = angular.module('wfgcsig', []);
 app.controller('wfgcsigCtrl', function ($scope) {
 	// get a random insult
 	//var insults = $.getJSON("./server/insults/insults.json", {
-	var insults = $.getJSON("http://localhost:3000/insults", {
+	var insults = $.getJSON("http://calm-wave-1864.herokuapp.com/insults", {
 		format: "json"
 	}).done(function (data) {
 		var i = Math.floor((Math.random()*data.insults.length));
@@ -18,7 +18,7 @@ app.controller('wfgcsigCtrl', function ($scope) {
 		$scope.$apply();
 	});
 
-	var parts = $.getJSON("./server/parts/graphics/graphics.json", {
+	var parts = $.getJSON("http://calm-wave-1864.herokuapp.com/graphics", {
 		format: "json"
 	}).done(function (data) {
 		var i = Math.floor((Math.random()*data.length));
