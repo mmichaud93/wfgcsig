@@ -6,15 +6,13 @@ var port = Number(process.env.PORT || 53535);
 app.listen(port);
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
-app.get('/insult', function(request, response) {
+app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
 		if(err) { throw err; }
 		response.send(JSON.stringify(json));
 	});
 });
-app.post('/save-insult', function(request, response) {
-	console.log("save-insult");
-	console.log(request.body);
+app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
 
 	fs.writeFile(outputFilename, JSON.stringify(request.body), function(err) {
