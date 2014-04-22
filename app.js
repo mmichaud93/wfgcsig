@@ -8,6 +8,7 @@ app.listen(port, function() {
   console.log("listening on port: "+port);
 });
 app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.bodyParser());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/', function(request, response) {
     response.sendfile('./index.html');
@@ -39,8 +40,8 @@ app.get('/insults', function(request, response) {
 });
 app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
-    console.log("request.query = "+JSON.stringify(request));
-	fs.writeFile(outputFilename, request.query, function(err) {
+    console.log("request.query = "+request.body.insults);
+	fs.writeFile(outputFilename, request.body, function(err) {
     	if(err) {
             console.log(err);
     	} else {
