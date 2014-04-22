@@ -8,7 +8,7 @@ app.listen(port, function() {
   console.log("listening on port: "+port);
 });
 app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.bodyParser()); 
+app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/', function(request, response) {
     response.sendfile('./index.html');
 });
@@ -29,7 +29,6 @@ app.get('/adminController.js', function(request, response) {
 });
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
-        console.log(json);
 		if(err) {
             console.log(err);
             response.send('404 File Not Found');
@@ -41,13 +40,13 @@ app.get('/insults', function(request, response) {
 app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
     console.log("request.query = "+request.param('insults'));
-	fs.writeFile(outputFilename, request.param('insults'), function(err) {
-    	if(err) {
+    fs.writeFile(outputFilename, request.param('insults'), function(err) {
+        if(err) {
             console.log(err);
-    	} else {
-    	  console.log("JSON saved to " + outputFilename);
-    	}
-	}); 
+        } else {
+          console.log("JSON saved to " + outputFilename);
+        }
+    }); 
     response.send("done");
 });
 app.get('/graphics', function(request, response) {
