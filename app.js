@@ -28,7 +28,7 @@ app.get('/adminController.js', function(request, response) {
     response.sendfile('./adminController.js');
 });
 app.get('/insults', function(request, response) {
-	readJSONFile("./insults/insults.json", function (err, json) {
+	readJSONFile("/insults/insults.json", function (err, json) {
 		if(err) {
             console.log(err);
             response.send('404 File Not Found');
@@ -38,9 +38,9 @@ app.get('/insults', function(request, response) {
 	});
 });
 app.post('/save-insults', function(request, response) {
-	var outputFilename = './insults/insults.json';
-console.log(request.body);
-	fs.writeFile(outputFilename, request.body, function(err) {
+	var outputFilename = '/insults/insults.json';
+console.log(request.body[0]);
+	fs.writeFile(outputFilename, request.body[0], function(err) {
     	if(err) {
             console.log(err);
     	  console.log(err);
