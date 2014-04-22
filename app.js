@@ -18,6 +18,15 @@ app.get('/styles.css', function(request, response) {
 app.get('/controller.js', function(request, response) {
     response.sendfile('./controller.js');
 });
+app.get('/admin', function(request, response) {
+    response.sendfile('./admin.html');
+});
+app.get('/adminStyles.css', function(request, response) {
+    response.sendfile('./adminStyles.css');
+});
+app.get('/adminController.js', function(request, response) {
+    response.sendfile('./adminController.js');
+});
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
 		if(err) {
@@ -30,7 +39,7 @@ app.get('/insults', function(request, response) {
 app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
 
-	fs.writeFile(outputFilename, JSON.stringify(request.body), function(err) {
+	fs.writeFile(outputFilename, request.body, function(err) {
     	if(err) {
     	  console.log(err);
     	} else {
