@@ -78,7 +78,7 @@ function saveInsults() {
 	console.log(json);
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST','http://calm-wave-1864.herokuapp.com/save-insults',true);
-	xhr.setRequestHeader('Content-type','application/json');
+	xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 	xhr.send('json=' + json);
 }
 
