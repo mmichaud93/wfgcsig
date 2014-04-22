@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wfgcsig">
+	<head>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>What Fucking Graphics Card Should I Buy</title>
+
+		<link href="styles.css" rel="stylesheet" media="screen">
+		<script src="server/angular.min.js"></script>
+  		<script src="server/controller.js"></script>
+	</head>
+	
+	<body ng-controller="wfgcsigCtrl">
+    	<div id="title-wrapper">
+    		<span id="title">WHAT FUCKING GRAPHICS CARD SHOULD I GET?!</span>
+    	</div>	
+    	<div id="part">
+    		<div id="insult-wrapper">
+    			<span id="insult">{{insult}}</span><a id="name" ng-href="{{partLink}}" target="_blank">{{part}}</a><span id="second-insult">{{secondInsult}}</span>
+    		</div>	
+    		<div id="image-wrapper">
+                <span id="image">
+                    <img ng-src="{{partImage}}">
+                </span>
+    		</div>
+            <div id="description-wrapper">
+                <span id="description">
+                    {{partDesc}}
+                </span>
+            </div>
+
+    		<!-- </div>	
+    		<div class="center-text" style="margin-top:16px;"> -->
+    	</div>
+    	<div class="center-text" style="margin-top:16px; clear:both;">
+    		<span><a id="nope" href=".">I DON'T WANT THAT ONE!</span>
+    	</div>	
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	</body>
+</html>

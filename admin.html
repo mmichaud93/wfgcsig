@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wfgcsigAdmin">
+	<head>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>This Fucking Admin Tool Sucks</title>
+
+		<link href="adminStyles.css" rel="stylesheet" media="screen">
+		<script src="server/angular.min.js"></script>
+  		<script src="server/adminController.js"></script>
+	</head>
+	
+	<body ng-controller="wfgcsigCtrlAdmin" onload="onload();">
+        <div id="insults-title-wrapper">
+            <span id="insults-title">INSULTS YOU FUCKING IDIOT</span>
+        </div>
+        <div>
+    	   <ul>
+                <li ng-repeat="insult in insults">
+                    <input class="input" type="text" ng-model="insult.insult">
+                    <input class="input" type="text" ng-model="insult.secondInsult">
+                </li>
+                <button id="insults-new-button">ADD A NEW SHITTY INSULT</button>
+            </ul>
+        </div>
+        <button id="insults-save-button">JUST FUCKING SAVE IT</button>
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	</body>
+</html>
