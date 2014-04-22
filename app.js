@@ -30,6 +30,7 @@ app.get('/adminController.js', function(request, response) {
 });
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
+        console.log(json);
 		if(err) {
             console.log(err);
             response.send('404 File Not Found');
