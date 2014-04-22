@@ -42,9 +42,9 @@ app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
     var data = response.body;
     console.log(response);
-    console.log("data = "+data);
+    console.log(response.body);
     //console.log("data.insults = "+data.insults);
-    fs.writeFile(outputFilename, data, function(err) {
+    fs.writeFile(outputFilename, response.body, function(err) {
         if(err) {
             console.log(err);
         } else {
