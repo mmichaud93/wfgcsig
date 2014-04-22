@@ -7,7 +7,10 @@ app.listen(port);
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/insult', function(request, response) {
-	console.log("insult");
+	readJSONFile("./insults/insults.json", function (err, json) {
+		if(err) { throw err; }
+		response.send(JSON.stringify(json));
+	});
 });
 app.post('/save-insult', function(request, response) {
 	console.log("save-insult");
@@ -23,5 +26,22 @@ app.post('/save-insult', function(request, response) {
 	}); 
 });
 app.get('/graphicscard', function(request, response) {
-	console.log("graphicscard");
+	readJSONFile("./parts/graphics/graphics.json", function (err, json) {
+		if(err) { throw err; }
+		response.send(JSON.stringify(json));
+	});
 });
+
+function readJSONFile(filename, callback) {
+	fs.readFile(filename, function (err, data) {
+    	if(err) {
+    		callback(err);
+    		return;
+    	}
+    	try {
+    		callback(null, JSON.parse(data));
+    	} catch(exception) {
+    		callback(exception);
+    	}
+	});
+}
