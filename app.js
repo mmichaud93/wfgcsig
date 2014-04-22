@@ -39,7 +39,7 @@ app.get('/insults', function(request, response) {
 });
 app.post('/save-insults', function(request, response) {
 	var outputFilename = './insults/insults.json';
-    console.log("request.query = "+JSON.stringify(request.query));
+    console.log("request.query = "+JSON.stringify(request));
 	fs.writeFile(outputFilename, request.query, function(err) {
     	if(err) {
             console.log(err);
@@ -47,6 +47,7 @@ app.post('/save-insults', function(request, response) {
     	  console.log("JSON saved to " + outputFilename);
     	}
 	}); 
+    response.send("done");
 });
 app.get('/graphics', function(request, response) {
 	readJSONFile("./parts/graphics/graphics.json", function (err, json) {
