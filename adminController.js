@@ -81,7 +81,7 @@ function saveInsults() {
 	xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
   	// send the collected data as JSON
-  	xhr.send(JSON.stringify(data));
+  	xhr.send("insults="+JSON.stringify(data));
 }
 
 function newInsult() {
