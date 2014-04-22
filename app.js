@@ -30,6 +30,7 @@ app.get('/adminController.js', function(request, response) {
 app.get('/insults', function(request, response) {
 	readJSONFile("./insults/insults.json", function (err, json) {
 		if(err) {
+            console.log(err);
             response.send('404 File Not Found');
         } else {
 		    response.send(JSON.stringify(json));
@@ -41,6 +42,7 @@ app.post('/save-insults', function(request, response) {
 
 	fs.writeFile(outputFilename, request.body, function(err) {
     	if(err) {
+            console.log(err);
     	  console.log(err);
     	} else {
     	  console.log("JSON saved to " + outputFilename);
@@ -50,6 +52,7 @@ app.post('/save-insults', function(request, response) {
 app.get('/graphics', function(request, response) {
 	readJSONFile("./parts/graphics/graphics.json", function (err, json) {
 		if(err) {
+            console.log(err);
             response.send("404 File Not Found");
         } else {
             response.send(JSON.stringify(json));
