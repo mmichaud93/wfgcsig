@@ -8,6 +8,7 @@ app.listen(port, function() {
   console.log("listening on port: "+port);
 });
 app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.bodyParser());
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.get('/', function(request, response) {
     response.sendfile('./index.html');
