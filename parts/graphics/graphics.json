@@ -1,0 +1,23 @@
+{
+	"length":3,
+	"parts": [
+		{
+			"name":"ASUS RADEON R9",
+			"link":"http://www.newegg.com/Product/Product.aspx?Item=N82E16814121803",
+			"image":"http://c1.neweggimages.com/BizIntell/item/14/121/14-121-803/pro.jpg",
+			"desc":"THIS SON OF BITCH IS BRIMMING WITH 2048 STREAM PROCESSORS WHATEVER THE FUCK THAT MEANS. IT HAS 3GB OF GDDR5 RAM FOR ALL YOU NETFLIX STREAMING NEEDS. AND A PCI EXRESS 3.0 IF YOUR BRAIN CAN EVEN FATHOM THAT SHIT. PICK THIS FUCKER UP FOR 389.99 OF YOUR USELESS AMERICAN DOLLARS."
+		},
+		{
+			"name":"NVIDIA GEFORCE GTX 690",
+			"link":"http://www.newegg.com/Product/Product.aspx?Item=N82E16814121636",
+			"image":"http://images17.newegg.com/is/image/newegg/14-121-636-TS",
+			"desc":"FEAST YOUR UNWORTHY EYES ON ALL 4GBS OF GDDR5 RAM AND 3072 CUDA CORES. THAT'S SO MANY CORES IT WILL MAKE CRYSIS LOOK LIKE FUCKING CANDY LAND. SMASH EVERY PIGGY BANK YOU CAN FIND TO MATCH THE $938.00 PRICE TAG YOU HIGH ROLLING SON OF A BITCH."
+		},
+		{
+			"name":"NVIDIA GEFORCE GTX 680",
+			"link":"http://www.newegg.com/Product/Product.aspx?Item=N82E16814130912",
+			"image":"http://images17.newegg.com/is/image/newegg/14-130-912-Z01",
+			"desc":"1536 CUDA CORES FOR YOUR LAZY ASS, 2GB 256-BIT GDDR5 OF WEAK ASS RAM, PCI EXPRESS 2.0 LIKE IT'S 1995, AND IT COSTS $599.00 YOU CHEAP ASSHOLE"
+		}
+	]
+}
