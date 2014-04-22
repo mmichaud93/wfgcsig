@@ -9,7 +9,7 @@ app.controller('wfgcsigCtrlAdmin', function ($scope) {
 	$.getJSON("http://calm-wave-1864.herokuapp.com/insults", {
 		format: "json"
 	}).done(function (data) {
-		var i = Math.floor((Math.random()*data.length));
+		var i = Math.floor((Math.random()*data.insults.length));
 		// $("#insult").animate({
   //   		opacity: 1
   // 		}, 500, function() {});
@@ -20,7 +20,7 @@ app.controller('wfgcsigCtrlAdmin', function ($scope) {
 		//$scope.secondInsult = data.insults[i].secondInsult;
 		
 		insults = data.insults;
-		insults = insults.slice(0, insults.length-1);
+		insults = insults.slice(0, insults.length);
 		$scope.insults = insults;
 		$scope.$apply();
 		putInsults();
